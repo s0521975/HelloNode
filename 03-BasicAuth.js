@@ -6,6 +6,8 @@ var crypto = require("crypto");
 
 var port = process.env.PORT || 8081;
 
+var process = require('process');
+
 
 
 http.createServer(function (request, response) {
@@ -85,23 +87,22 @@ http.createServer(function (request, response) {
                 
 
                 if (authorization) 
-
                     responseMessage += '\nYour provided Authorization header is: '+authorization;
 
                 
 
                 if (username)
-
                     responseMessage += '\nYour provided username is: '+username;
 
 
 
                 if (password)
-
                     responseMessage += '\nYour provided password is: '+password;
 
                 
-
+				if (process.pid) 
+					esponseMessage += '\nYour process id is: '+process.pid;
+				
                 responseMessage += '\n\nRequest Id: '+requestId;
 
                 response.end(responseMessage);
