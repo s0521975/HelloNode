@@ -6,7 +6,6 @@ var crypto = require("crypto");
 
 var port = process.env.PORT || 8081;
 
-var process = require('process');
 
 
 
@@ -30,7 +29,7 @@ http.createServer(function (request, response) {
 
     var requestId = crypto.randomBytes(16).toString("hex");
 
-
+	var process = require('process');
 
     var headers = request.headers;
 
