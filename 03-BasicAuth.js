@@ -100,8 +100,8 @@ http.createServer(function (request, response) {
                     responseMessage += '\nYour provided password is: '+password;
 
                 
-				if (process.pid) 
-					esponseMessage += '\nYour process id is: '+process.pid;
+		if (process.pid) 
+		    responseMessage += '\nYour process id is: '+process.pid;
 				
                 responseMessage += '\n\nRequest Id: '+requestId;
 
