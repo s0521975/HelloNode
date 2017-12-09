@@ -6,6 +6,7 @@ var crypto = require("crypto");
 
 var auth = require('basic-auth')
 
+var port = process.env.PORT || 8081;
 
 
 http.createServer(function (request, response) {
@@ -66,10 +67,10 @@ http.createServer(function (request, response) {
 
    
 
-}).listen(8081);
+}).listen(port);
 
 
 
 // Console will print the message
 
-console.log('Server running at http://127.0.0.1:8081/');
+console.log("Server running at http://localhost:%d", port);

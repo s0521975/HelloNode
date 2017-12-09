@@ -20,7 +20,7 @@
 
     "scripts": {
 
-        "start": "node HelloCloud.js"
+        "start": "node 03-BasicAuth.js"
 
     }
 
